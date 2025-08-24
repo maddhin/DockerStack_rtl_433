@@ -7,7 +7,7 @@ services:
       - "/dev/bus/usb/001/002"
     command:
       #- "-d0"
-      - "-g0"
+      #- "-g0"
       - "-f433.92M"
       - "-f868M"
       - "-H300"
