@@ -29,7 +29,7 @@ services:
       #- "-R127"
       #- "-R172"
       #- "-R181"
-      - "-FKV"
+      - "-Fkv"
       #- "-Fjson"
       - "-Fmqtt://192.168.0.144:1883,retain=1,user=mqtt,pass=s7og577d,events=rtl_433[/model][/id]"
       - "-Flog"
