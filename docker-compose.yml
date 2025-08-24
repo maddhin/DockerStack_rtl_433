@@ -1,1 +1,39 @@
-
+version: "3"
+services:
+  rtl433:
+    image: hertzg/rtl_433:latest
+    restart: unless-stopped
+    devices:
+      - "/dev/bus/usb/001/002"
+    command:
+      - "-d0"
+      - "-g0"
+      - "-f433.92M"
+      - "-f868M"
+      - "-H300"
+      - "-s1024k"
+      - "-Yauto"
+      - "-Ysquelch"
+      - "-Ymagest"
+      - "-Mlevel"
+      - "-Mnoise"
+      - "-Mstats"
+      - "-Mtime:utc:usec"
+      - "-Mprotocol"
+      - "-p0"
+      - "-R12"
+      - "-R19"
+      - "-R54"
+      - "-R119"
+      - "-R124"
+      - "-R127"
+      - "-R172"
+      - "-R181"
+      - "-R190"
+      - "-R192"
+      - "-R194"
+      - "-R196"
+      - "-R199"
+      - "-Fmqtt://192.168.0.144:1883,retain=1,user=mqtt,pass=s7og577d,events=rtl_433[/model][/id]"
+      - "-X0"
+    
