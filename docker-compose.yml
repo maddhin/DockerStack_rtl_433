@@ -7,7 +7,7 @@ services:
       - "/dev/bus/usb/001/002"
     command:
       #- "-d0"
-      #- "-g0"
+      - "-g0"
       - "-f433.92M"
       - "-f868M"
       - "-H300"
@@ -29,7 +29,8 @@ services:
       #- "-R127"
       #- "-R172"
       #- "-R181"
-      - "-Fjson"
+      - "-FKV"
+      #- "-Fjson"
       - "-Fmqtt://192.168.0.144:1883,retain=1,user=mqtt,pass=s7og577d,events=rtl_433[/model][/id]"
-      #- "-Flog"
+      - "-Flog"
     
